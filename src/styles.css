@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* styles.css */
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Or remove margin and padding for a specific element */
+.some-element {
+  margin: 0;
+  padding: 0;
+}

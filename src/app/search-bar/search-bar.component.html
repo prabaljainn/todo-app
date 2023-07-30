@@ -1,0 +1,18 @@
+<div class="main-container">
+  <div class="center-container">
+    <div>
+      <p class="to-do">TODO</p>
+    </div>
+    <div class="input-box">
+      <!-- <input type="checkbox" /> -->
+      <input
+        #inputRef
+        (keydown)="onPressEnterAction(inputRef, $event)"
+        type="text"
+        name=""
+        id=""
+        placeholder="Create a new Todo"
+      />
+    </div>
+  </div>
+</div>
