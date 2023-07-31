@@ -1,0 +1,37 @@
+<form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+  <div>
+    <label for="username">Username:</label>
+    <input type="text" name="username" formControlName="username" />
+    <div *ngIf="userNameField?.errors">
+      <span *ngIf="userNameField?.errors?.['required']">Required field</span>
+    </div>
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" name="password" formControlName="password" />
+  </div>
+
+  <div formGroupName="moreInfo">
+    <label for="name">Name:</label>
+    <input type="text" name="name" formControlName="name" />
+  </div>
+
+
+  <div formArrayName="locations">
+    <div *ngFor="let locationForm of locations.controls; let i = index">
+        <div [formGroupName]="i">
+            <label for="latitude">Latitude:</label>
+            <input type="text" XformControlName="latitude">
+            <label for="longitude">Longitude:</label>
+            <input type="text" formControlName="longitude">
+        </div>
+    </div>
+</div>
+
+
+
+  <button (click)="addLocation()">Add Location</button>
+  <div>
+    <button type="submit">Login</button>
+  </div>
+</form>

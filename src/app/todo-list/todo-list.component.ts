@@ -9,7 +9,7 @@ export class TodoListComponent {
   isClicked: boolean = false;
   @Input()
   todoName: string = '';
-  
+
   @Output()
   removeItemEvent = new EventEmitter<string>();
 
@@ -20,10 +20,8 @@ export class TodoListComponent {
     this.isClicked = !this.isClicked;
   }
   getTime() {
-    //return just time
     return this.formatAMPM(new Date());
   }
-
   formatAMPM(date: Date) {
     var hours = date.getHours();
     var minutes: any = date.getMinutes();
@@ -34,5 +32,4 @@ export class TodoListComponent {
     var strTime = hours + ':' + minutes + ' ' + ampm;
     return strTime;
   }
-
 }

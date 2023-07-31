@@ -5,18 +5,23 @@ import { AppComponent } from './app.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
 import { BackgroundComponent } from './background/background.component';
+import { FormsComponent } from './forms/forms.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginFormComponent } from './login-form/login-form.component';
+import { PrefixPipe } from './prefix.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchBarComponent,
     TodoListComponent,
-    BackgroundComponent
+    BackgroundComponent,
+    FormsComponent,
+    LoginFormComponent,
+    PrefixPipe,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

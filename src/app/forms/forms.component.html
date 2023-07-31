@@ -1,0 +1,13 @@
+<form #myForm="ngForm" (submit)="onSubmit(myForm)">
+  <div>
+    <label for="name"></label>
+    <input name="name" ngModel type="text" required />
+
+    <label for="email"></label>
+    <input name="email" ngModel type="email" required />
+  </div>
+
+  <button type="submit">Submit</button>
+</form>
+
+<!-- {{ myForm }} -->

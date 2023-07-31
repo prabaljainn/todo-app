@@ -1,13 +1,13 @@
 <app-background></app-background>
 
-
 <app-search-bar (onPressEnter)="onEventRecieved($event)"></app-search-bar>
 <br />
 <br />
-
-
 
 <div *ngFor="let item of toDoList">
   <app-todo-list [todoName]="item" (removeItemEvent)="removeTask($event)">
   </app-todo-list>
 </div>
+
+<!-- <app-forms></app-forms> -->
+<!-- <app-login-form></app-login-form> -->
