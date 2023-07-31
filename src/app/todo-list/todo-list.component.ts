@@ -9,13 +9,14 @@ export class TodoListComponent {
   isClicked: boolean = false;
   @Input()
   todoName: string = '';
+  
   @Output()
   removeItemEvent = new EventEmitter<string>();
 
   removeItem() {
     this.removeItemEvent.emit(this.todoName);
   }
-  strikeThrough() {
+  taskCompleted() {
     this.isClicked = !this.isClicked;
   }
   getTime() {
@@ -33,4 +34,5 @@ export class TodoListComponent {
     var strTime = hours + ':' + minutes + ' ' + ampm;
     return strTime;
   }
+
 }

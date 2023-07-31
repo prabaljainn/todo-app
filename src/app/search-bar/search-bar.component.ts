@@ -12,8 +12,6 @@ export class SearchBarComponent {
   onPressEnterAction(myInputRef: HTMLInputElement, event: KeyboardEvent) {
     if (event.key === 'Enter') {
       this.onPressEnter.emit(myInputRef.value);
-      console.log(event);
-      // alert(myInputRef.value);
       myInputRef.value = '';
     }
   }
